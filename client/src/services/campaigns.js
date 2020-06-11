@@ -25,7 +25,7 @@ export const deleteCampaign = async (id) => {
   return resp
 }
 
-export const campaignToFlavor = async (flavorId, campaignId) => {
-  const resp = await api.get(`/flavors/${flavorId}/campaigns/${campaignId}`);
+export const campaignToCharacter = async (characterId, campaignId) => {
+  const resp = await api.get(`/characters/${characterId}/campaigns/${campaignId}`);
   return resp.data;
 }

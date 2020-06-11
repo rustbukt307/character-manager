@@ -6,9 +6,9 @@ import { getAllCharacters } from '../services/characters';
 import { getAllCampaigns, createCampaign, deleteCampaign, updateCampaign } from '../services/campaigns';
 import ShowCharacters from './ShowCharacters';
 import ShowCampaigns from './ShowCampaigns';
-import CreateCampaigns from './CreateCampaigns';
-import UpdateCampaigns from './UpdateCampaigns';
-import CampaignsItem from './CampaignsItem';
+import CreateCampaign from './CreateCampaign';
+import UpdateCampaign from './UpdateCampaign';
+import CampaignItem from './CampaignItem';
 
 export default class Main extends Component {
   state = {

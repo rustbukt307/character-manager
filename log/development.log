@@ -89,3 +89,24 @@ FOREIGN KEY ("campaign_id")
   [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "testeban2020"], ["password_digest", "$2a$12$dSyliA3BCKro88EAlY/nRuj52CSR57VVh4thsuv6uob9P/pB2SOjK"], ["created_at", "2020-06-11 02:11:56.327268"], ["updated_at", "2020-06-11 02:11:56.327268"]]
   [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (26.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCampaign Load (1.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (36.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testeban2020"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "testeban2020"], ["password_digest", "$2a$12$A1vauLL8T0CQlCDbhswvT.fl1niuMfGbf/7Xz4taUGenw/Hkk2jfy"], ["created_at", "2020-06-11 15:38:26.779234"], ["updated_at", "2020-06-11 15:38:26.779234"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (20.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCampaign Create (7.1ms)[0m  [1m[32mINSERT INTO "campaigns" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Campaign 1"], ["user_id", 2], ["created_at", "2020-06-11 15:38:26.804357"], ["updated_at", "2020-06-11 15:38:26.804357"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campaigns"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (3.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "user_id", "campaign_id", "race", "char_class", "level", "alignment", "xp", "str", "dex", "con", "int", "wis", "cha", "prof_bonus", "hp", "ac", "hit_dice", "inventory", "feats", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING "id"[0m  [["name", "Characteronius the Mighty"], ["user_id", 2], ["campaign_id", 1], ["race", "Half-Orc"], ["char_class", "Barbarian"], ["level", 1], ["alignment", "Chaotic Good"], ["xp", 1], ["str", 16], ["dex", 8], ["con", 13], ["int", 12], ["wis", 14], ["cha", 7], ["prof_bonus", 2], ["hp", 13], ["ac", 20], ["hit_dice", "1d12"], ["inventory", "Great sword"], ["feats", "Rage, Unarmored Defense"], ["created_at", "2020-06-11 15:38:26.938693"], ["updated_at", "2020-06-11 15:38:26.938693"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m

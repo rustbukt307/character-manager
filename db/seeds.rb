@@ -9,14 +9,41 @@ Campaign.destroy_all
 Character.destroy_all
 User.destroy_all
 
-@user = User.create!({ username: 'testeban2020', password: '123456' })
+@user = User.create!({ 
+  username: 'testeban2020',
+  password: '123456'
+  })
 
 p "#{User.count} user(s) created"
 
-@characteronius = Character.create!(name: 'Characteronius the Mighty')
-
-p "#{Character.count} Character(s) created"
-
-Campaign.create!(name: 'Campaign 1', user: @user, characters: [@characteronius])
+@campaign1 = Campaign.create!(
+  name: 'Campaign 1',
+  user: @user
+)
 
 p "#{Campaign.count} campaign(s) created"
+
+@characteronius = Character.create!(
+  name: 'Characteronius the Mighty',
+  user: @user,
+  campaign: @campaign1,
+  race: 'Half-Orc',
+  char_class: 'Barbarian',
+  level: 1,
+  alignment: 'Chaotic Good',
+  xp: 1,
+  str: 16,
+  dex: 8,
+  con: 13,
+  int: 12,
+  wis: 14,
+  cha: 7,
+  prof_bonus: 2,
+  hp: 13,
+  ac: 20,
+  hit_dice: '1d12',
+  inventory: 'Great sword',
+  feats: 'Rage, Unarmored Defense'
+)
+
+p "#{Character.count} Character(s) created"

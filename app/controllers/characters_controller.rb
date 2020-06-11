@@ -1,11 +1,11 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: [:index, :show]
+  before_action :set_campaign, only: [:index, :create]
 
   # GET /characters
   def index
-    @characters = Character.all
-
-    render json: @characters
+    render json: @campaign.characters
   end
 
   # GET /characters/1
@@ -16,9 +16,11 @@ class CharactersController < ApplicationController
   # POST /characters
   def create
     @character = Character.new(character_params)
+    @character.user = @current_user
+    @character.campaign = @campaign
 
     if @character.save
-      render json: @character, status: :created, location: @character
+      render json: @character, status: :created
     else
       render json: @character.errors, status: :unprocessable_entity
     end
@@ -44,8 +46,12 @@ class CharactersController < ApplicationController
       @character = Character.find(params[:id])
     end
 
+    def set_campaign
+      @campaign = Campaign.find(params[:campaign_id])
+    end
+
     # Only allow a trusted parameter "white list" through.
     def character_params
-      params.require(:character).permit(:name, :user_id, :campaign_id, :race, :char_class, :level, :alignment, :xp, :str, :dex, :con, :int, :wis, :cha, :prof_bonus, :hp, :ac, :hit_dice, :inventory, :feats)
+      params.require(:character).permit(:name, :campaign_id, :race, :char_class, :level, :alignment, :xp, :str, :dex, :con, :int, :wis, :cha, :prof_bonus, :hp, :ac, :hit_dice, :inventory, :feats)
     end
 end

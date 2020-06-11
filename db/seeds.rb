@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Campaign.destroy_all
+
 Character.destroy_all
+Campaign.destroy_all
 User.destroy_all
 
 @user = User.create!({ 

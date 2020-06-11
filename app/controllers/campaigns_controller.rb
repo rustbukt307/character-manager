@@ -1,5 +1,6 @@
 class CampaignsController < ApplicationController
   before_action :set_campaign, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: [:index, :show]
 
   # GET /campaigns
   def index
@@ -16,6 +17,7 @@ class CampaignsController < ApplicationController
   # POST /campaigns
   def create
     @campaign = Campaign.new(campaign_params)
+    @campaign.user = @current_user
 
     if @campaign.save
       render json: @campaign, status: :created, location: @campaign
@@ -46,6 +48,6 @@ class CampaignsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def campaign_params
-      params.require(:campaign).permit(:name, :user_id)
+      params.require(:campaign).permit(:name)
     end
 end

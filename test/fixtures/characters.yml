@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user: one
+  campaign: one
+  race: MyString
+  char_class: MyString
+  level: 1
+  alignment: MyString
+  xp: 1
+  str: 1
+  dex: 1
+  con: 1
+  int: 1
+  wis: 1
+  cha: 1
+  prof_bonus: 1
+  hp: 1
+  ac: 1
+  hit_dice: 1
+  inventory: 
+  feats: 
+
+two:
+  name: MyString
+  user: two
+  campaign: two
+  race: MyString
+  char_class: MyString
+  level: 1
+  alignment: MyString
+  xp: 1
+  str: 1
+  dex: 1
+  con: 1
+  int: 1
+  wis: 1
+  cha: 1
+  prof_bonus: 1
+  hp: 1
+  ac: 1
+  hit_dice: 1
+  inventory: 
+  feats: 

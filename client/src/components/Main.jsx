@@ -17,10 +17,16 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    this.getCharacters();
-    this.getCampaigns();
+    if (this.props.currentUser) {
+      this.getCampaigns()
+    }
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      this.getCampaigns()
+    }
+  }
 
   // Characters
 

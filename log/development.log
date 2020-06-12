@@ -826,3 +826,1764 @@ Processing by CharactersController#index as */*
 Completed 200 OK in 145ms (Views: 8.1ms | ActiveRecord: 127.0ms | Allocations: 1906)
 
 
+Started GET "/campaigns" for ::1 at 2020-06-11 18:58:00 -0400
+Started GET "/characters" for ::1 at 2020-06-11 18:58:00 -0400
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (46.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 152ms (Views: 46.8ms | ActiveRecord: 92.2ms | Allocations: 27913)
+
+
+Started GET "/characters" for ::1 at 2020-06-11 19:00:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/campaigns" for ::1 at 2020-06-11 19:00:00 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (131.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 135ms (Views: 3.3ms | ActiveRecord: 131.5ms | Allocations: 2745)
+
+
+Started GET "/characters" for ::1 at 2020-06-11 19:00:10 -0400
+Started GET "/campaigns" for ::1 at 2020-06-11 19:00:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (78.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 82ms (Views: 3.3ms | ActiveRecord: 78.3ms | Allocations: 20784)
+
+
+Started GET "/characters" for ::1 at 2020-06-11 19:01:47 -0400
+Started GET "/campaigns" for ::1 at 2020-06-11 19:01:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (127.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 130ms (Views: 2.1ms | ActiveRecord: 127.8ms | Allocations: 20961)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-11 19:02:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testeban2020"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 310ms (Views: 0.3ms | ActiveRecord: 37.0ms | Allocations: 5477)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-11 19:02:09 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (0.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 880)
+
+
+Started GET "/characters" for ::1 at 2020-06-11 19:02:29 -0400
+Started GET "/campaigns" for ::1 at 2020-06-11 19:02:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:02:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (103.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 107ms (Views: 2.6ms | ActiveRecord: 103.9ms | Allocations: 20837)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1068)
+
+
+Started POST "/campaigns" for ::1 at 2020-06-11 19:02:43 -0400
+Processing by CampaignsController#create as HTML
+  Parameters: {"campaign"=>{"name"=>"Campaign 2"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[36mCampaign Create (3.8ms)[0m  [1m[32mINSERT INTO "campaigns" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Campaign 2"], ["user_id", 4], ["created_at", "2020-06-11 23:02:43.100027"], ["updated_at", "2020-06-11 23:02:43.100027"]]
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+Completed 201 Created in 60ms (Views: 1.2ms | ActiveRecord: 32.3ms | Allocations: 5507)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 10:03:18 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (7.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 50ms (Views: 5.6ms | ActiveRecord: 20.6ms | Allocations: 853)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 10:22:09 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 10:22:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 10:22:09 -0400
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mCampaign Load (151.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 178ms (Views: 24.7ms | ActiveRecord: 151.6ms | Allocations: 16287)
+
+
+  [1m[36mUser Load (207.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 354ms (Views: 0.4ms | ActiveRecord: 207.6ms | Allocations: 36685)
+
+
+Started GET "/campaigns/5" for ::1 at 2020-06-12 10:22:12 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCampaign Load (0.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 767)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 10:22:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 10:22:29 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 10:22:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (76.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 79ms (Views: 2.2ms | ActiveRecord: 76.2ms | Allocations: 21069)
+
+
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 347ms (Views: 0.6ms | ActiveRecord: 83.7ms | Allocations: 22508)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:23:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:23:49 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:23:49 -0400
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (17.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 33ms (Views: 13.2ms | ActiveRecord: 17.4ms | Allocations: 3959)
+
+
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 74ms (Views: 2.5ms | ActiveRecord: 44.0ms | Allocations: 19904)
+
+
+Started POST "/users/" for ::1 at 2020-06-12 11:24:11 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rustbukt307"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (31.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "rustbukt307"], ["password_digest", "$2a$12$vTaPEpmRWDuQFEZd0cy6l.bpeiVtnhXv8vgdgG2223DfcoEghS226"], ["created_at", "2020-06-12 15:24:12.175957"], ["updated_at", "2020-06-12 15:24:12.175957"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 338ms (Views: 2.4ms | ActiveRecord: 37.4ms | Allocations: 4234)
+
+
+Started POST "/campaigns" for ::1 at 2020-06-12 11:24:46 -0400
+Processing by CampaignsController#create as HTML
+  Parameters: {"campaign"=>{"name"=>"Ty's Campaign"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[36mCampaign Create (4.6ms)[0m  [1m[32mINSERT INTO "campaigns" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ty's Campaign"], ["user_id", 5], ["created_at", "2020-06-12 15:24:46.267537"], ["updated_at", "2020-06-12 15:24:46.267537"]]
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+Completed 201 Created in 43ms (Views: 0.6ms | ActiveRecord: 31.2ms | Allocations: 3363)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 11:25:22 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 767)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 11:26:02 -0400
+Started GET "/characters" for ::1 at 2020-06-12 11:26:02 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:26:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:26:02 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mCampaign Load (114.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Processing by CampaignsController#index as HTML
+Completed 200 OK in 119ms (Views: 0.5ms | ActiveRecord: 114.4ms | Allocations: 15842)
+
+
+  [1m[36mCampaign Load (27.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 3.4ms | ActiveRecord: 27.2ms | Allocations: 1918)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 957)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 11:26:16 -0400
+Started GET "/characters" for ::1 at 2020-06-12 11:26:16 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:26:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:26:17 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (35.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 39ms (Views: 0.8ms | ActiveRecord: 35.7ms | Allocations: 13761)
+
+
+  [1m[36mCampaign Load (276.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCampaign Load (276.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 317ms (Views: 0.8ms | ActiveRecord: 276.0ms | Allocations: 37388)
+
+
+Completed 200 OK in 290ms (Views: 12.7ms | ActiveRecord: 276.7ms | Allocations: 22377)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 11:26:27 -0400
+Started GET "/characters" for ::1 at 2020-06-12 11:26:27 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:26:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:26:27 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (41.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 140ms (Views: 0.6ms | ActiveRecord: 41.6ms | Allocations: 36642)
+
+
+  [1m[36mCampaign Load (117.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  [1m[36mUser Load (115.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 123ms (Views: 0.8ms | ActiveRecord: 115.8ms | Allocations: 22512)
+
+
+Completed 200 OK in 123ms (Views: 5.3ms | ActiveRecord: 117.6ms | Allocations: 23180)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:27:06 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:27:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:27:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (46.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCampaign Load (46.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 50ms (Views: 3.9ms | ActiveRecord: 46.0ms | Allocations: 20106)
+
+
+Completed 200 OK in 62ms (Views: 0.8ms | ActiveRecord: 46.7ms | Allocations: 21391)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:28:12 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:28:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:28:12 -0400
+Processing by CampaignsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mCampaign Load (238.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 242ms (Views: 3.7ms | ActiveRecord: 238.1ms | Allocations: 35627)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (45.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 51ms (Views: 0.6ms | ActiveRecord: 46.8ms | Allocations: 901)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:29:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:29:01 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:29:01 -0400
+Processing by CampaignsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (298.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 302ms (Views: 3.2ms | ActiveRecord: 298.2ms | Allocations: 36648)
+
+
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 8.2ms | Allocations: 2182)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:29:03 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:29:03 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:29:03 -0400
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (94.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCampaign Load (71.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 99ms (Views: 0.5ms | ActiveRecord: 94.6ms | Allocations: 36915)
+
+
+Completed 200 OK in 77ms (Views: 5.4ms | ActiveRecord: 71.4ms | Allocations: 22107)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:29:09 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:29:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:29:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (85.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 89ms (Views: 2.5ms | ActiveRecord: 85.9ms | Allocations: 20070)
+
+
+  [1m[36mUser Load (104.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 108ms (Views: 0.6ms | ActiveRecord: 104.7ms | Allocations: 22389)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:34:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:34:18 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:34:18 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2207)
+
+
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 2268)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:34:30 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:34:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:34:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (108.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 112ms (Views: 0.6ms | ActiveRecord: 108.8ms | Allocations: 9617)
+
+
+  [1m[36mCampaign Load (118.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 124ms (Views: 5.9ms | ActiveRecord: 118.0ms | Allocations: 12167)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:34:57 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:34:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:34:57 -0400
+Processing by CampaignsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (47.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  [1m[36mUser Load (28.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 69ms (Views: 21.1ms | ActiveRecord: 47.1ms | Allocations: 28976)
+
+
+Completed 200 OK in 52ms (Views: 0.8ms | ActiveRecord: 28.9ms | Allocations: 14853)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:35:07 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:35:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:35:07 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (1.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.1ms | Allocations: 1173)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (73.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 76ms (Views: 0.5ms | ActiveRecord: 73.2ms | Allocations: 2666)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 11:35:45 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 11:35:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 11:35:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (47.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 55ms (Views: 6.3ms | ActiveRecord: 47.9ms | Allocations: 20546)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (25.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 55ms (Views: 0.8ms | ActiveRecord: 25.0ms | Allocations: 1297)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 13:00:00 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCampaign Load (0.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 42ms (Views: 3.8ms | ActiveRecord: 1.2ms | Allocations: 852)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 13:01:41 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:01:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 13:01:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (9.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 5.6ms | ActiveRecord: 9.2ms | Allocations: 2511)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 47ms (Views: 0.8ms | ActiveRecord: 24.9ms | Allocations: 957)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 13:48:16 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:48:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (1.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 1.8ms | Allocations: 1760)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 13:50:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (44.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rustbukt307"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 565ms (Views: 0.5ms | ActiveRecord: 44.9ms | Allocations: 1105)
+
+
+Started GET "/campaigns/6" for ::1 at 2020-06-12 13:50:56 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 767)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 13:52:08 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:52:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 13:52:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (14.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 3.5ms | ActiveRecord: 14.7ms | Allocations: 4744)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 21ms (Views: 0.8ms | ActiveRecord: 14.8ms | Allocations: 5832)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 13:54:17 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:54:19 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 13:54:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (15.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 560ms (Views: 0.5ms | ActiveRecord: 511.2ms | Allocations: 13035)
+
+
+  [1m[36mCharacter Load (52.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  [1m[36mCharacter Load (1.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 5]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+  [1m[36mCharacter Load (22.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 6]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 820ms (Views: 178.6ms | ActiveRecord: 621.9ms | Allocations: 32055)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 13:54:56 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 874)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 13:56:10 -0400
+Started GET "/characters" for ::1 at 2020-06-12 13:56:10 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:56:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 13:56:10 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (35.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mCharacter Load (72.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 772ms (Views: 345.5ms | ActiveRecord: 366.2ms | Allocations: 23363)
+
+
+Processing by CampaignsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (85.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 243ms (Views: 19.2ms | ActiveRecord: 211.1ms | Allocations: 40162)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 474ms (Views: 0.8ms | ActiveRecord: 445.5ms | Allocations: 29685)
+
+
+Started PUT "/campaigns/6" for ::1 at 2020-06-12 13:57:20 -0400
+Processing by CampaignsController#update as HTML
+  Parameters: {"campaign"=>{"name"=>"Ty's Great Campaign"}, "id"=>"6"}
+  [1m[36mCampaign Load (47.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:31:in `update'
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/campaigns_controller.rb:31:in `update'
+  [1m[36mCampaign Update (19.9ms)[0m  [1m[33mUPDATE "campaigns" SET "name" = $1, "updated_at" = $2 WHERE "campaigns"."id" = $3[0m  [["name", "Ty's Great Campaign"], ["updated_at", "2020-06-12 17:57:20.512724"], ["id", 6]]
+  ↳ app/controllers/campaigns_controller.rb:31:in `update'
+  [1m[35m (30.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/campaigns_controller.rb:31:in `update'
+Completed 200 OK in 192ms (Views: 0.4ms | ActiveRecord: 115.7ms | Allocations: 5360)
+
+
+Started DELETE "/campaigns/6" for ::1 at 2020-06-12 13:58:15 -0400
+Processing by CampaignsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCampaign Load (2.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/campaigns_controller.rb:40:in `destroy'
+  [1m[36mCharacter Load (3.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 6]]
+  ↳ app/controllers/campaigns_controller.rb:40:in `destroy'
+  [1m[36mCampaign Destroy (2.8ms)[0m  [1m[31mDELETE FROM "campaigns" WHERE "campaigns"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/campaigns_controller.rb:40:in `destroy'
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/campaigns_controller.rb:40:in `destroy'
+Completed 204 No Content in 94ms (ActiveRecord: 56.9ms | Allocations: 7834)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 13:59:12 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (30.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 169ms (Views: 94.0ms | ActiveRecord: 72.2ms | Allocations: 16598)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 13:59:18 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 13:59:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (31.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 43ms (Views: 11.0ms | ActiveRecord: 31.1ms | Allocations: 4059)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 13:59:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (35.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rustbukt307"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 533ms (Views: 0.7ms | ActiveRecord: 35.4ms | Allocations: 1179)
+
+
+Started GET "/campaigns/5" for ::1 at 2020-06-12 14:00:09 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCampaign Load (31.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 5]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 40ms (Views: 3.9ms | ActiveRecord: 32.9ms | Allocations: 1769)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:00:17 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (49.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mCharacter Load (36.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 99ms (Views: 8.7ms | ActiveRecord: 86.7ms | Allocations: 2077)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:02:13 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 869)
+
+
+Started GET "/characters" for ::1 at 2020-06-12 14:02:31 -0400
+Started GET "/campaigns" for ::1 at 2020-06-12 14:02:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:02:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (37.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 43ms (Views: 5.1ms | ActiveRecord: 37.5ms | Allocations: 9352)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 248ms (Views: 1.7ms | ActiveRecord: 241.4ms | Allocations: 957)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:02:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:02:38 -0400
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (91.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCampaign Load (94.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 97ms (Views: 0.7ms | ActiveRecord: 91.4ms | Allocations: 1531)
+
+
+Completed 200 OK in 101ms (Views: 6.1ms | ActiveRecord: 94.8ms | Allocations: 2283)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:04:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:04:22 -0400
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (1.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.8ms | Allocations: 1237)
+
+
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 4.9ms | Allocations: 2023)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:04:49 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1137.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 1141ms (Views: 0.5ms | ActiveRecord: 1137.0ms | Allocations: 873)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:04:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:04:56 -0400
+Processing by CampaignsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (10.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 10.7ms | Allocations: 1440)
+
+
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 11.7ms | Allocations: 2081)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:05:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (344.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 348ms (Views: 0.5ms | ActiveRecord: 344.6ms | Allocations: 869)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:09:30 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (55.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 73ms (Views: 6.4ms | ActiveRecord: 55.6ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:09:30 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (18.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 9.7ms | ActiveRecord: 18.2ms | Allocations: 1066)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:09:53 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (26.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 32ms (Views: 5.6ms | ActiveRecord: 26.0ms | Allocations: 1066)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:09:59 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1066)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:10:12 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mCampaign Load (30.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 3.9ms | ActiveRecord: 30.9ms | Allocations: 1066)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 14:14:08 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testeban2020"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 766ms (Views: 1.5ms | ActiveRecord: 49.5ms | Allocations: 5180)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:14:09 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (28.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 28.6ms | Allocations: 2362)
+
+
+  
+NoMethodError (undefined method `campaigns' for #<User:0x00007f901f5fc0b0>):
+  
+app/controllers/campaigns_controller.rb:7:in `index'
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:15:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (32.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 189ms (Views: 0.7ms | ActiveRecord: 145.4ms | Allocations: 5558)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:15:23 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (90.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (48.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 466ms (Views: 224.4ms | ActiveRecord: 218.4ms | Allocations: 6324)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:15:40 -0400
+Processing by CampaignsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 141)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 14:15:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"rustbukt307", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rustbukt307"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 554ms (Views: 0.4ms | ActiveRecord: 5.4ms | Allocations: 1181)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:15:49 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (22.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 32ms (Views: 5.3ms | ActiveRecord: 22.7ms | Allocations: 1705)
+
+
+Started POST "/campaigns" for ::1 at 2020-06-12 14:16:01 -0400
+Processing by CampaignsController#create as HTML
+  Parameters: {"campaign"=>{"name"=>"Ty's Campaign"}}
+  [1m[36mUser Load (45.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[36mCampaign Create (46.9ms)[0m  [1m[32mINSERT INTO "campaigns" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ty's Campaign"], ["user_id", 5], ["created_at", "2020-06-12 18:16:01.178580"], ["updated_at", "2020-06-12 18:16:01.178580"]]
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/campaigns_controller.rb:22:in `create'
+Completed 201 Created in 117ms (Views: 3.7ms | ActiveRecord: 98.8ms | Allocations: 3444)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:16:08 -0400
+Processing by CampaignsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 14:16:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testeban2020"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 368ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 1016)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:16:16 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (28.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 37ms (Views: 3.6ms | ActiveRecord: 29.6ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:16:34 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (2.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 204ms (Views: 172.0ms | ActiveRecord: 25.6ms | Allocations: 20708)
+
+
+Started GET "/characters/undefined/campaigns/3" for ::1 at 2020-06-12 14:16:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters/undefined/campaigns/3"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/characters/undefined/campaigns/3" for ::1 at 2020-06-12 14:16:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters/undefined/campaigns/3"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/characters/undefined/campaigns/3" for ::1 at 2020-06-12 14:16:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters/undefined/campaigns/3"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/characters/undefined/campaigns/3" for ::1 at 2020-06-12 14:16:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters/undefined/campaigns/3"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:18:24 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:18:24 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (413.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 417ms (Views: 0.3ms | ActiveRecord: 413.4ms | Allocations: 712)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 98ms (Views: 0.9ms | ActiveRecord: 3.2ms | Allocations: 957)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:18:29 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.9ms | Allocations: 1928)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:21:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:21:38 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (2.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 715)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (30.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 33ms (Views: 0.8ms | ActiveRecord: 30.0ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:21:38 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:21:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:21:44 -0400
+Processing by CampaignsController#show as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCampaign Load (1.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 1575)
+
+
+Completed 401 Unauthorized in 7ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1459)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:21:45 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (497.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (480.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 984ms (Views: 3.3ms | ActiveRecord: 977.4ms | Allocations: 1928)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:22:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 14:22:37 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (4.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 1190)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 2.9ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-12 14:22:37 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 7.2ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-12 14:29:10 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (3.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 86ms (Views: 5.2ms | ActiveRecord: 33.6ms | Allocations: 2862)
+
+

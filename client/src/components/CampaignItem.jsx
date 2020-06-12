@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { getOneCampaign, campaignToCharacter } from '../services/campaigns';
 
 export default class CampaignItem extends Component {
-  // We need to store the food in state once we make our api.
+  // We need to store the campaign in state once we make our api.
   // Additionally we have a form in this component so we will
   // need some data for that form in state.
   state = {
-    food: null,
-    flavorId: ''
+    campaign: null,
   }
 
-  // setFood will make an api call with the id that we passed from props
-  // this it will set state. We're only calling setFood on componentDidMount
+  // setCharacter will make an api call with the id that we passed from props
+  // this it will set state. We're only calling setCharacter on componentDidMount
   componentDidMount() {
     this.setCampaign()
   }
@@ -50,7 +50,7 @@ export default class CampaignItem extends Component {
             <>
               <h3>{campaign.name}</h3>
               {campaign.characters.map(character => (
-                <p key={character.id}>{character.name}</p>
+                <Link key={character.id}>{character.name}</Link>
               ))}
               {/* This is our form for the select dropdown */}
               {/* One note about dropdowns in react: the handleChange wont */}

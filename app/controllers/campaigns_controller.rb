@@ -1,17 +1,17 @@
 class CampaignsController < ApplicationController
   before_action :set_campaign, only: [:show, :update, :destroy]
-  before_action :authorize_request, except: [:index, :show]
+  before_action :authorize_request
 
   # GET /campaigns
   def index
-    @campaigns = Campaign.all
+    @campaigns = @current_user.campaigns.all
 
     render json: @campaigns
   end
 
   # GET /campaigns/1
   def show
-    render json: @campaign
+    render json: @campaign, include: :characters
   end
 
   # POST /campaigns

@@ -5355,3 +5355,1199 @@ Processing by CampaignsController#index as HTML
 Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 1.2ms | Allocations: 1923)
 
 
+Started GET "/campaigns/3" for ::1 at 2020-06-15 15:52:18 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (30.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (3.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 44ms (Views: 5.6ms | ActiveRecord: 34.1ms | Allocations: 2753)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 15:52:32 -0400
+Processing by CampaignsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-15 17:45:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"testeban2020", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testeban2020"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 861ms (Views: 2.8ms | ActiveRecord: 31.3ms | Allocations: 1110)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 17:45:49 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (95.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 242ms (Views: 63.8ms | ActiveRecord: 97.9ms | Allocations: 1931)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:45:57 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (6.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (144.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 251ms (Views: 16.4ms | ActiveRecord: 185.1ms | Allocations: 2774)
+
+
+Started GET "/characters/undefined/campaigns/3" for ::1 at 2020-06-15 17:46:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/characters/undefined/campaigns/3"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:50:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:50:47 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (202.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 206ms (Views: 0.3ms | ActiveRecord: 202.5ms | Allocations: 712)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:50:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:50:54 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (50.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 54ms (Views: 0.3ms | ActiveRecord: 50.2ms | Allocations: 740)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1303.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 1551ms (Views: 0.6ms | ActiveRecord: 1398.3ms | Allocations: 971)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:50:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:50:59 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (133.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 137ms (Views: 0.6ms | ActiveRecord: 133.0ms | Allocations: 899)
+
+
+  [1m[36mCampaign Load (151.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 290ms (Views: 0.5ms | ActiveRecord: 151.2ms | Allocations: 1873)
+
+
+  [1m[36mUser Load (305.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 653ms (Views: 0.8ms | ActiveRecord: 563.1ms | Allocations: 3735)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 17:51:00 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (361.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (415.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 823ms (Views: 40.4ms | ActiveRecord: 777.0ms | Allocations: 1932)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:51:11 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:51:11 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1855.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 1863ms (Views: 0.6ms | ActiveRecord: 1855.6ms | Allocations: 897)
+
+
+  [1m[36mCampaign Load (139.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2000ms (Views: 0.5ms | ActiveRecord: 139.3ms | Allocations: 1865)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 17:51:15 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (348.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (13.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 371ms (Views: 5.3ms | ActiveRecord: 361.5ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:51:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:51:55 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (4.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 882)
+
+
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 14.5ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 17:51:56 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 2.8ms | Allocations: 1928)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:53:43 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:53:43 -0400
+  [1m[36mCampaign Load (234.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 237ms (Views: 0.3ms | ActiveRecord: 234.0ms | Allocations: 1187)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (43.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 48ms (Views: 0.8ms | ActiveRecord: 43.7ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 17:53:44 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (148.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (248.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 407ms (Views: 5.1ms | ActiveRecord: 397.3ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 17:59:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 17:59:55 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (1.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 2.2ms | ActiveRecord: 5.5ms | Allocations: 1953)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:00:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:00:00 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (4.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 1.5ms | ActiveRecord: 4.9ms | Allocations: 712)
+
+
+  [1m[36mUser Load (148.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 1261ms (Views: 2.3ms | ActiveRecord: 240.9ms | Allocations: 3307)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (38.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 52ms (Views: 0.7ms | ActiveRecord: 43.1ms | Allocations: 958)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:00:04 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 147ms (Views: 126.0ms | ActiveRecord: 15.0ms | Allocations: 1928)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:01:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:01:25 -0400
+Processing by CampaignsController#show as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (3.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 1186)
+
+
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.7ms | ActiveRecord: 10.6ms | Allocations: 1775)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:01:26 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (2.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 47ms (Views: 34.7ms | ActiveRecord: 8.4ms | Allocations: 1928)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:02:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:02:20 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (97.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 102ms (Views: 0.2ms | ActiveRecord: 97.2ms | Allocations: 1090)
+
+
+  [1m[36mUser Load (99.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 104ms (Views: 0.7ms | ActiveRecord: 99.8ms | Allocations: 1775)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:02:21 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (304.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 316ms (Views: 3.9ms | ActiveRecord: 305.9ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:02:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:02:27 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#show as HTML
+  [1m[36mUser Load (216.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"id"=>"3"}
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 220ms (Views: 0.5ms | ActiveRecord: 216.5ms | Allocations: 1291)
+
+
+  [1m[36mCampaign Load (25.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 29ms (Views: 0.3ms | ActiveRecord: 25.9ms | Allocations: 1203)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:02:28 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (124.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (700.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 833ms (Views: 2.5ms | ActiveRecord: 825.0ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:02:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:02:34 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (3.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 1190)
+
+
+  [1m[36mUser Load (804.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 809ms (Views: 0.9ms | ActiveRecord: 804.2ms | Allocations: 1774)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:02:36 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (29.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 43ms (Views: 7.5ms | ActiveRecord: 30.9ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:02:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:02:57 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (2.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 10.5ms | Allocations: 1721)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:02:58 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (85.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 101ms (Views: 5.4ms | ActiveRecord: 90.9ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:03:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:03:28 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (101.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 401 Unauthorized in 107ms (Views: 0.3ms | ActiveRecord: 101.6ms | Allocations: 1675)
+
+
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 2.5ms | Allocations: 1557)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:03:29 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (28.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 36ms (Views: 3.2ms | ActiveRecord: 30.4ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:03:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:03:53 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (59.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 65ms (Views: 0.7ms | ActiveRecord: 59.3ms | Allocations: 869)
+
+
+  [1m[36mCampaign Load (139.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 144ms (Views: 0.4ms | ActiveRecord: 139.6ms | Allocations: 2167)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:03:54 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (91.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 102ms (Views: 4.0ms | ActiveRecord: 94.7ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:05:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:05:07 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (3.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 22ms (Views: 1.0ms | ActiveRecord: 3.2ms | Allocations: 882)
+
+
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 33ms (Views: 1.7ms | ActiveRecord: 25.8ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:05:09 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (24.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 2.9ms | ActiveRecord: 25.0ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:05:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:05:18 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (293.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 298ms (Views: 0.4ms | ActiveRecord: 293.9ms | Allocations: 715)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (193.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 197ms (Views: 0.5ms | ActiveRecord: 193.5ms | Allocations: 870)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:05:19 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 1.5ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:08:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:08:54 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (37.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 360ms (Views: 0.7ms | ActiveRecord: 314.2ms | Allocations: 5383)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 132ms (Views: 1.1ms | ActiveRecord: 71.1ms | Allocations: 5468)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:08:56 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (24.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (3.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 92ms (Views: 21.5ms | ActiveRecord: 59.6ms | Allocations: 6275)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:09:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:09:57 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 6.8ms | Allocations: 1424)
+
+
+  [1m[36mCampaign Load (6.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.3ms | ActiveRecord: 6.4ms | Allocations: 1746)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:09:57 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (54.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (24.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 86ms (Views: 3.8ms | ActiveRecord: 78.6ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:10:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:10:09 -0400
+Processing by CampaignsController#show as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (86.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCampaign Load (86.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Completed 200 OK in 91ms (Views: 1.0ms | ActiveRecord: 86.2ms | Allocations: 1423)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 94ms (Views: 0.5ms | ActiveRecord: 86.1ms | Allocations: 1613)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:10:10 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (47.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (25.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 80ms (Views: 3.9ms | ActiveRecord: 72.2ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:10:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:10:26 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 3.9ms | Allocations: 869)
+
+
+  [1m[36mCampaign Load (10.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 0.4ms | ActiveRecord: 10.3ms | Allocations: 1849)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:10:27 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (7.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 6.5ms | ActiveRecord: 8.1ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:10:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:10:31 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (246.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 254ms (Views: 0.8ms | ActiveRecord: 246.4ms | Allocations: 869)
+
+
+  [1m[36mCampaign Load (392.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 396ms (Views: 0.6ms | ActiveRecord: 392.4ms | Allocations: 2167)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:10:32 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (137.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (12.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 157ms (Views: 3.6ms | ActiveRecord: 149.8ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:10:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:10:46 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (0.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 4.4ms | Allocations: 1119)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:10:47 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 3.1ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:10:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:10:54 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (116.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 120ms (Views: 0.2ms | ActiveRecord: 116.0ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (166.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 169ms (Views: 0.6ms | ActiveRecord: 166.3ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:10:55 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 1.5ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:11:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:11:34 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (5.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.2ms | ActiveRecord: 5.9ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (140.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 144ms (Views: 0.7ms | ActiveRecord: 140.5ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:11:34 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (152.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 161ms (Views: 3.4ms | ActiveRecord: 153.6ms | Allocations: 1926)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:11:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:11:44 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (7.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.3ms | ActiveRecord: 7.8ms | Allocations: 1089)
+
+
+  [1m[36mUser Load (556.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 559ms (Views: 0.6ms | ActiveRecord: 556.1ms | Allocations: 1774)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:11:46 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 2.6ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:13:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:13:04 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 869)
+
+
+  [1m[36mCampaign Load (60.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 63ms (Views: 0.3ms | ActiveRecord: 60.5ms | Allocations: 2166)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:13:05 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (386.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (49.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 443ms (Views: 3.6ms | ActiveRecord: 436.8ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:13:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:13:15 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (64.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 68ms (Views: 0.3ms | ActiveRecord: 64.8ms | Allocations: 712)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (50.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 54ms (Views: 0.6ms | ActiveRecord: 50.7ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:13:16 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (89.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 108ms (Views: 4.6ms | ActiveRecord: 99.7ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:13:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:13:31 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (104.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 109ms (Views: 1.4ms | ActiveRecord: 104.8ms | Allocations: 1288)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:13:31 -0400
+  [1m[36mCampaign Load (784.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 787ms (Views: 0.3ms | ActiveRecord: 784.3ms | Allocations: 2137)
+
+
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1751.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (252.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 2013ms (Views: 3.5ms | ActiveRecord: 2003.9ms | Allocations: 1937)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:13:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:13:55 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (2.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 1556)
+
+
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 1538)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:13:57 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (178.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (15.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 201ms (Views: 3.7ms | ActiveRecord: 193.7ms | Allocations: 1925)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:14:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:14:13 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (234.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 237ms (Views: 0.3ms | ActiveRecord: 234.0ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (342.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 346ms (Views: 0.7ms | ActiveRecord: 342.0ms | Allocations: 1762)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:14:14 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (39.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 51ms (Views: 5.6ms | ActiveRecord: 40.3ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:14:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:14:37 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (99.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 401 Unauthorized in 103ms (Views: 0.3ms | ActiveRecord: 99.8ms | Allocations: 1233)
+
+
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 1698)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:14:38 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (83.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 93ms (Views: 5.5ms | ActiveRecord: 83.7ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:14:42 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (0.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 712)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:14:42 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (90.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 93ms (Views: 0.4ms | ActiveRecord: 90.2ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:14:43 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (92.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (18.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 119ms (Views: 4.3ms | ActiveRecord: 111.4ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:14:47 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (3.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (2.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 215ms (Views: 143.7ms | ActiveRecord: 63.2ms | Allocations: 20628)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:15:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:15:43 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 869)
+
+
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (55.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 59ms (Views: 0.3ms | ActiveRecord: 55.5ms | Allocations: 771)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:15:44 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (141.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 151ms (Views: 3.9ms | ActiveRecord: 142.4ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:15:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:15:57 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 1288)
+
+
+  [1m[36mCampaign Load (52.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 57ms (Views: 0.3ms | ActiveRecord: 52.7ms | Allocations: 1639)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:15:58 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (56.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 4.0ms | ActiveRecord: 57.7ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:16:03 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:16:03 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 16ms (Views: 2.0ms | ActiveRecord: 6.8ms | Allocations: 870)
+
+
+  [1m[36mCampaign Load (16.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 24ms (Views: 0.3ms | ActiveRecord: 16.1ms | Allocations: 1790)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:16:04 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (945.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (14.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 967ms (Views: 4.5ms | ActiveRecord: 959.6ms | Allocations: 1924)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:16:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:16:12 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCampaign Load (83.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 88ms (Views: 0.3ms | ActiveRecord: 83.8ms | Allocations: 1199)
+
+
+  [1m[36mUser Load (64.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 68ms (Views: 0.8ms | ActiveRecord: 64.3ms | Allocations: 1761)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:16:13 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (99.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (75.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 183ms (Views: 3.8ms | ActiveRecord: 175.7ms | Allocations: 1923)
+
+
+Started GET "/campaigns/3" for ::1 at 2020-06-15 18:16:20 -0400
+Processing by CampaignsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampaign Load (0.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campaigns_controller.rb:46:in `set_campaign'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCharacter Load (28.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."campaign_id" = $1[0m  [["campaign_id", 3]]
+  ↳ app/controllers/campaigns_controller.rb:14:in `show'
+Completed 200 OK in 39ms (Views: 5.0ms | ActiveRecord: 29.5ms | Allocations: 2753)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:16:22 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (2.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 19ms (Views: 0.9ms | ActiveRecord: 2.9ms | Allocations: 1172)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:18:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:18:40 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (83.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 680ms (Views: 3.7ms | ActiveRecord: 445.8ms | Allocations: 17847)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 55ms (Views: 0.7ms | ActiveRecord: 25.8ms | Allocations: 5434)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:18:41 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 87ms (Views: 19.6ms | ActiveRecord: 40.9ms | Allocations: 6268)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:19:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:19:49 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (279.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 283ms (Views: 0.8ms | ActiveRecord: 279.5ms | Allocations: 3586)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:19:51 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (545.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCharacter Load (542.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mCampaign Load (178.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 732ms (Views: 3.2ms | ActiveRecord: 723.7ms | Allocations: 14788)
+
+
+Completed 200 OK in 1970ms (Views: 0.8ms | ActiveRecord: 1763.0ms | Allocations: 21348)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:20:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:20:01 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCharacter Load (1.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.6ms | Allocations: 1523)
+
+
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 1.5ms | Allocations: 2033)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:20:01 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (1.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 2.2ms | ActiveRecord: 30.1ms | Allocations: 1926)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:20:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:20:27 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 884)
+
+
+  [1m[36mCharacter Load (147.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 155ms (Views: 1.1ms | ActiveRecord: 147.0ms | Allocations: 2474)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:20:28 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (606.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (224.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 839ms (Views: 3.8ms | ActiveRecord: 831.1ms | Allocations: 1928)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:20:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:20:44 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCharacter Load (150.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 157ms (Views: 1.1ms | ActiveRecord: 150.5ms | Allocations: 1489)
+
+
+  [1m[36mUser Load (501.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 505ms (Views: 0.7ms | ActiveRecord: 501.5ms | Allocations: 2076)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:20:45 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (95.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (29.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 137ms (Views: 5.5ms | ActiveRecord: 124.5ms | Allocations: 1924)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:20:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:20:53 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (380.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 384ms (Views: 0.9ms | ActiveRecord: 380.1ms | Allocations: 1003)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 869)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:20:53 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 2.6ms | Allocations: 1926)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:22:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:22:32 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (45.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 48ms (Views: 0.4ms | ActiveRecord: 45.2ms | Allocations: 958)
+
+
+  [1m[36mCharacter Load (72.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 76ms (Views: 1.0ms | ActiveRecord: 72.4ms | Allocations: 1969)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:22:33 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (35.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 3.8ms | ActiveRecord: 48.4ms | Allocations: 1923)
+
+
+Started GET "/characters/3" for ::1 at 2020-06-15 18:22:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 18:22:41 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (142.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 146ms (Views: 0.7ms | ActiveRecord: 142.2ms | Allocations: 869)
+
+
+  [1m[36mCharacter Load (160.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 200 OK in 164ms (Views: 0.9ms | ActiveRecord: 160.1ms | Allocations: 2343)
+
+
+Started GET "/campaigns" for ::1 at 2020-06-15 18:22:42 -0400
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (137.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mCampaign Load (2.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns" WHERE "campaigns"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/campaigns_controller.rb:9:in `index'
+Completed 200 OK in 147ms (Views: 3.4ms | ActiveRecord: 139.8ms | Allocations: 1923)
+
+

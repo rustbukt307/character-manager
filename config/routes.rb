@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :characters
   end
   
+  resources :characters, only: :show
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   

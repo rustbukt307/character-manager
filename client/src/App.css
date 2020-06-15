@@ -32,6 +32,10 @@ input, button {
   color: rgb(187, 28, 28);
 }
 
+header > * :visited {
+  text-decoration: none;
+  color: rgb(187, 28, 28);
+}
 
 h1 {
   font-size: 40px;

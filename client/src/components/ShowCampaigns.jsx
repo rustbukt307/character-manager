@@ -5,9 +5,9 @@ export default function ShowCampaigns(props) {
   const { campaigns, currentUser, destroyCampaign, history } = props;
   return (
     <>
-      <hr />
-      <h3>Campaigns</h3>
-        <div className="campaign-list">
+    <hr/>
+    <h3>CAMPAIGNS</h3>
+      <div className="campaign-list">
         {
           campaigns.map(campaign => (
             <React.Fragment key={campaign.id}>
@@ -22,11 +22,11 @@ export default function ShowCampaigns(props) {
                   </>
                 )
               }
-              <br/>
+              <br />
             </React.Fragment>
           ))
         }
-        </div>
+      </div>
       <br />
       <Link to='/new/campaign'><button>Create</button></Link>
     </>

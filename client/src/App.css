@@ -1,6 +1,10 @@
 body {
   margin: 0;
   font-size: 1.5em;
+  background-color: black;
+  background: url("wp2227193-dungeons-dragons-wallpapers.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Girassol', serif;
 }
 
 .App {
@@ -14,6 +18,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: rgb(187, 28, 28);
+  text-decoration: underline;
 }
 
 .auth {
@@ -44,6 +54,16 @@ nav > a {
 h3 {
   padding: 30px;
   font-size: 1.5em;
+}
+
+main {
+  max-width: 650px;
+  margin: 0 auto;
+  border: 5px;
+  padding: 10px;
+  background: rgb(0, 0, 0, 0.5);
+  font-size: 18px;
+  color: rgb(178, 178, 178);
 }
 
 .campaign-list > a {
@@ -83,4 +103,10 @@ h3 {
   justify-self: end;
   align-self: start;
   padding: 15px 40px;
+}
+
+@media only screen and (max-width: 650px) {
+  section, img {
+    max-width: 500px;
+  }
 }

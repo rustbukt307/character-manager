@@ -5,7 +5,9 @@ export default function Header(props) {
   return (
     <header>
       <div className="header-main">
-        <h1>Character Manager</h1>
+        <h1>
+          <Link to='/'>CHARACTER MANAGER</Link>
+        </h1>
           <div className="auth">
             {
               props.currentUser

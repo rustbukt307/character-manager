@@ -18,7 +18,7 @@ export default class Login extends Component {
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <form onSubmit={(e) => {
+      <form className="auth-form" onSubmit={(e) => {
         e.preventDefault();
         handleLoginSubmit(this.state);
         history.push('/');

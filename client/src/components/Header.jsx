@@ -3,15 +3,19 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function Header(props) {
   return (
-    <div>
-      <h1>Character Manager</h1>
-      {
-        props.currentUser
-          ?
-          <>{props.currentUser.username}<button onClick={props.handleLogout}>Logout</button></>
-          :
-          <Link to='/user/login'>Login/Register</Link>
-      }
+    <header>
+      <div className="header-main">
+        <h1>Character Manager</h1>
+          <div className="auth">
+            {
+              props.currentUser
+                ?
+                <>{props.currentUser.username}<button onClick={props.handleLogout}>Logout</button></>
+                :
+                <Link to='/user/login'>Login/Register</Link>
+            }
+          </div>
+      </div>
       <hr />
       {
         props.currentUser && (
@@ -22,6 +26,6 @@ export default function Header(props) {
           </nav>
         )
       }
-    </div>
+    </header>
   )
 }

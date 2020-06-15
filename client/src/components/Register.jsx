@@ -17,7 +17,7 @@ export default class Register extends Component {
     const { username, password } = this.state;
     const { handleRegisterSubmit, history } = this.props;
     return (
-      <form onSubmit={(e) => {
+      <form className="auth-form" onSubmit={(e) => {
         e.preventDefault();
         handleRegisterSubmit(this.state);
         history.push('/');

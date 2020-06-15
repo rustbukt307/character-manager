@@ -9,6 +9,14 @@ body {
 
 .App {
   text-align: center;
+  text-decoration: none;
+}
+
+input, button {
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 15px;
+  background-color: rgb(178, 178, 178);
+  margin: 5px;
 }
 
 /* =============== header ================== */
@@ -18,11 +26,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 98%;
+  background: rgb(0, 0, 0, 0.5);
+  color: rgb(187, 28, 28);
 }
+
 
 h1 {
   font-size: 40px;
-  color: rgb(187, 28, 28);
   text-decoration: underline;
 }
 
@@ -53,38 +65,40 @@ nav > a {
 
 h3 {
   padding: 30px;
-  font-size: 1.5em;
+  font-size: 32px;
+  text-decoration: underline;
+  color: rgb(187, 28, 28);
 }
 
 main {
-  max-width: 650px;
+  max-width: 95.8%;
   margin: 0 auto;
   border: 5px;
   padding: 10px;
   background: rgb(0, 0, 0, 0.5);
+  text-align: center;
   font-size: 18px;
   color: rgb(178, 178, 178);
 }
 
 .campaign-list > a {
   grid-column: 3/4;
+  font-size: 24px;
+  margin: 5px;
 }
 
 .campaign-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: column;
   margin: 0 25%;
 }
 
-.campaign-list > * {
-  margin: 10px;
+.campaign-details {
+  font-size: 34px;
+  margin: 30px;
 }
 
-/* =============== main ================== */
-
 .auth-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: column;
   margin: 0 25%;
   grid-gap: 10px;
 }
@@ -103,6 +117,18 @@ main {
   justify-self: end;
   align-self: start;
   padding: 15px 40px;
+}
+
+Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  background: black;
+  width: 100vw;
 }
 
 @media only screen and (max-width: 650px) {

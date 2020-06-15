@@ -5,7 +5,6 @@ export default function ShowCampaigns(props) {
   const { campaigns, currentUser, destroyCampaign, history } = props;
   return (
     <>
-    <hr/>
     <h3>CAMPAIGNS</h3>
       <div className="campaign-list">
         {

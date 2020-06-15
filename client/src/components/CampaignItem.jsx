@@ -41,7 +41,7 @@ export default class CampaignItem extends Component {
     const { campaign } = this.state;
     const { characters, currentUser } = this.props;
     return (
-      <div>
+      <div className="campaign-details">
         {
           // Since we have to wait on the api call to return to get our campaign item
           // we need to add a guard operator here. Then we simply display the campaign

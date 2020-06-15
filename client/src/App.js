@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
+import Footer from './components/Footer'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 import './App.css'
 
@@ -48,6 +49,7 @@ export default class App extends Component {
           handleRegisterSubmit={this.handleRegisterSubmit}
           currentUser={this.state.currentUser}
         />
+        <Footer/>
       </div>
     )
   }

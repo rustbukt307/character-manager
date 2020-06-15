@@ -18,11 +18,10 @@ export default function Header(props) {
             }
           </div>
       </div>
-      <hr />
       {
         props.currentUser && (
           <nav>
-            <NavLink to="/campaigns">Campaigns</NavLink>
+            <NavLink to="/campaigns">View Campaigns</NavLink>
             {/* This should be on the campaign item's page */}
             {/* <NavLink to="/characters">Characters</NavLink> */}
           </nav>

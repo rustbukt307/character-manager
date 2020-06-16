@@ -50,7 +50,7 @@ export default class CampaignItem extends Component {
             <>
               <h3>{campaign.name}</h3>
               {campaign.characters.map(character => (
-                <Link key={character.id}>{character.name}</Link>
+                <Link key={character.id} to={`/characters/${character.id}`}>{character.name}</Link>
               ))}
               {/* This is our form for the select dropdown */}
               {/* One note about dropdowns in react: the handleChange wont */}

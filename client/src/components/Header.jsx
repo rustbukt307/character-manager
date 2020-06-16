@@ -5,6 +5,13 @@ export default function Header(props) {
   return (
     <header>
       <div className="header-main">
+      {
+        props.currentUser && (
+          <nav className="viewCamp">
+            <NavLink to="/campaigns">View Campaigns</NavLink>
+          </nav>
+        )
+      }
         <h1>
           <Link to='/'>CHARACTER MANAGER</Link>
         </h1>
@@ -18,15 +25,7 @@ export default function Header(props) {
             }
           </div>
       </div>
-      {
-        props.currentUser && (
-          <nav>
-            <NavLink to="/campaigns">View Campaigns</NavLink>
-            {/* This should be on the campaign item's page */}
-            {/* <NavLink to="/characters">Characters</NavLink> */}
-          </nav>
-        )
-      }
+      
     </header>
   )
 }

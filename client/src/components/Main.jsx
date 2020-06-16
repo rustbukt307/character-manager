@@ -9,6 +9,7 @@ import ShowCampaigns from './ShowCampaigns';
 import CreateCampaign from './CreateCampaign';
 import UpdateCampaign from './UpdateCampaign';
 import CampaignItem from './CampaignItem';
+import CharacterItem from './CharacterItem';
 
 export default class Main extends Component {
   state = {
@@ -81,7 +82,7 @@ export default class Main extends Component {
             handleRegisterSubmit={this.props.handleRegisterSubmit}
           />
         )} />
-        <Route path='/characters' render={() => (
+        <Route exact path='/characters' render={() => (
           <ShowCharacters
             characters={this.state.characters}
           />
@@ -127,6 +128,13 @@ export default class Main extends Component {
             currentUser={this.props.currentUser}
           />
         }} />
+        <Route path='/characters/:id' render={(props) => {
+          const characterId = props.match.params.id;
+          return <CharacterItem
+            characterId={characterId}
+            currentUser={this.props.currentUser}
+          />
+        }}/>
       </main>
     )
   }
